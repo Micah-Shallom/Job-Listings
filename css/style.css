@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan',sans-serif;
+}
+
+body, html {
+  height: 100vh;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  background-color: #5ba4a4;
+}
+
+.header-container {
+  background: #5ba4a4 url("../images/bg-header-mobile.svg") center no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.reveal {
+  visibility: visible;
+}
+
+.main {
+  background: #effafa;
+}
+
+.main-container {
+  padding: 20px 10px;
+}
+
+.main-container-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  top: -40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: white;
+  visibility: hidden;
+}
+
+.main-container-filter .filter-pills {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container-filter .filter-pills .pill {
+  display: flex;
+  background-color: #eef6f6;
+  transition: transform .5s ease;
+  margin: 3px 5px;
+  align-content: center;
+}
+
+.main-container-filter .filter-pills .pill:hover {
+  transform: scale(1.1);
+}
+
+.main-container-filter .filter-pills .pill span {
+  padding: 5px;
+}
+
+.main-container-filter .filter-pills .pill span:last-of-type {
+  background-color: #5ba4a4;
+  color: white;
+  font-weight: bold;
+}
+
+.main-container-filter .clearTag {
+  font-weight: bold;
+  color: #5ba4a4;
+}
+
+.main-container-overall {
+  background-color: #effafa;
+}
+
+.main-container-overall .profile {
+  border-left: 4px solid #5ba4a4;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main-container-overall .profile-logo {
+  height: 60px;
+  position: relative;
+  top: -30px;
+  width: 60px;
+}
+
+.main-container-overall .profile-upper .top {
+  margin-bottom: 10px;
+}
+
+.main-container-overall .profile-upper .top .company {
+  color: #5ba4a4;
+  font-weight: bold;
+}
+
+.main-container-overall .profile-upper .top .new {
+  background-color: #5ba4a4;
+  width: 50px;
+  border-radius: 20px;
+  font-size: 11px;
+  padding: 5px 8px;
+  color: white;
+}
+
+.main-container-overall .profile-upper .top .featured {
+  background-color: #2c3a3a;
+  border-radius: 20px;
+  font-size: 11px;
+  padding: 5px 8px;
+  color: white;
+}
+
+.main-container-overall .profile-upper .position {
+  color: #2c3a3a;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.main-container-overall .profile-upper ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-container-overall .profile-upper ul li:first-of-type {
+  list-style-type: none;
+}
+
+.main-container-overall .profile-upper ul li {
+  margin-right: 20px;
+  color: #7b8e8e;
+}
+
+.main-container-overall .profile hr {
+  margin: 10px 0;
+}
+
+.main-container-overall .profile-lower {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container-overall .profile-lower-pill {
+  color: #5ba4a4;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #effafa;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding: 6px 5px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transition: scale .5s ease;
+}
+
+.main-container-overall .profile-lower-pill:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1440px;
+  }
+  .main-container {
+    padding: 20px 40px;
+  }
+  .main-container-overall .profile {
+    flex-direction: row;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .main-container-overall .profile-logo {
+    top: 0;
+    margin-right: 20px;
+  }
+  .main-container-overall .profile-lower {
+    justify-self: center;
+    margin-left: auto;
+  }
+  .main-container-overall .profile hr {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

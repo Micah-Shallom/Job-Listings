@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+//All Colors
+$Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+$Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+$Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+$Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+$Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  font-family: 'Spartan',sans-serif;
+}
+body,html{
+  height: 100vh;
+}
+
+@mixin shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+.container{
+  max-width: 375px;
+  margin: auto;
+  width: 100%;
+  @include shadow;
+}
+.header{
+  background-color: $Desaturated-Dark-Cyan;
+  &-container{
+    background: $Desaturated-Dark-Cyan url('../images/bg-header-mobile.svg')center no-repeat;
+    background-size: cover;
+    height: 150px;
+  }
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.reveal{
+  visibility: visible;
+}
+.disapper{
+  visibility: hidden;
+}
+.main{
+  background: $Light-Grayish-Cyan-Background ;
+  &-container{
+    padding: 20px 10px;
+
+    &-filter{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      position: relative;
+      top: -40px;
+      @include shadow;
+      background: white;
+      visibility: hidden;
+      
+      .filter-pills{
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        .pill{
+            display: flex;
+            background-color: $Light-Grayish-Cyan-Filter-Tablets;
+            transition: transform .5s ease ;
+            margin: 3px 5px;
+            align-content: center;
+            &:hover{
+              transform: scale(1.1);
+            }
+            span{
+              padding: 5px;
+            }
+            span:last-of-type{
+              background-color: $Desaturated-Dark-Cyan;
+              color: white;
+              font-weight: bold;
+            }
+          }
+      }
+
+      .clearTag{
+        font-weight:bold;
+        color: $Desaturated-Dark-Cyan;
+      }
+    }
+
+    &-overall{
+      background-color: $Light-Grayish-Cyan-Background;
+      .profile{
+        border-left: 4px solid $Desaturated-Dark-Cyan;
+        background-color: white ;
+        border-radius: 5px;
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: 50px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        &-logo{
+          height: 60px;
+          position: relative;
+          top: -30px;
+          width: 60px;
+        }
+         &-upper{
+           .top{
+            margin-bottom: 10px;
+             .company{
+               color: $Desaturated-Dark-Cyan;
+               font-weight: bold;
+             }
+             .new{
+               background-color:$Desaturated-Dark-Cyan;
+               width: 50px;
+               border-radius: 20px;
+               font-size: 11px;
+               padding: 5px 8px;
+               color: white;
+             }
+             .featured{
+               background-color: $Very-Dark-Grayish-Cyan;
+               border-radius: 20px;
+               font-size: 11px;
+               padding: 5px 8px;
+               color: white;
+             }
+           }
+           .position{
+             color: $Very-Dark-Grayish-Cyan;
+             font-weight: bold;
+             margin-bottom: 5px;
+             font-size: 15px;
+           }
+           ul{
+             display: flex;
+             justify-content: flex-start;
+             li:first-of-type{
+               list-style-type: none;
+             }
+             li{
+               margin-right: 20px;
+               color: $Dark-Grayish-Cyan;
+             }
+           }
+          }
+          hr{
+            margin: 10px 0 ;
+          }
+          &-lower{
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            &-pill{
+              color: $Desaturated-Dark-Cyan;
+              font-weight: bold;
+              border-radius: 5px;
+              background-color: $Light-Grayish-Cyan-Background;
+              margin-right: 20px;
+              margin-bottom: 10px;
+              padding: 6px 5px;
+              font-size: 13px;
+              cursor: pointer;
+              @include shadow;
+              transition: scale .5s ease;
+              &:active{
+                transform: scale(.98);
+              }
+            }
+          }
+      }
+    }
+  }
+
+}
+@import 'responsive';

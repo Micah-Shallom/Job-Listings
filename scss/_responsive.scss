@@ -1,0 +1,29 @@
+@media screen and (min-width:768px){
+  .container{
+    max-width: 1440px;
+  }
+  .main{
+    &-container{
+      padding: 20px 40px;
+      &-overall{
+        .profile{
+          flex-direction: row;
+          padding: 10px 15px;
+          align-items: center;
+          justify-content: flex-start;
+          &-logo{
+            top: 0;
+            margin-right: 20px;
+          }
+          &-lower{
+            justify-self: center;
+            margin-left: auto;
+          }
+          hr{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
